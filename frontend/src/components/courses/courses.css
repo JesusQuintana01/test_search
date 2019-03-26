@@ -1,0 +1,125 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+}
+.filter {
+  width: 25%;
+  min-width: 128px;
+  margin-bottom: 10px;
+}
+.filter .filters_main_button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-color: #fefeff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  width: 100%;
+  min-height: 50px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.filter .options {
+  box-sizing: border-box;
+  background-color: #fefeff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+.filter .options .radio {
+  padding: 5px 0;
+}
+.filter .options .radio label {
+  display: block;
+}
+
+.filter .options .radio input[type="radio"] {
+  position: absolute;
+  display: block;
+}
+
+.filter .options .radio input[type="radio"] + label {
+  position: relative;
+  padding: 0px 0 0px 30px;
+  cursor: pointer;
+}
+
+.filter .options .radio input[type="radio"] + label:before {
+  content: "";
+  background-color: #fefeff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.filter .options .radio input[type="radio"] + label:after {
+  content: "";
+  background-color: #295792;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  opacity: 0;
+}
+.filter .options .radio input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+.filter .options .radio input[type="radio"]:checked + label:before {
+  border: 2px solid #295792;
+}
+.dropdown_button {
+  text-transform: uppercase;
+  text-align: left;
+  width: 100%;
+  border: none;
+  background-color: #fefeff;
+  height: 30px;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+.content .list {
+  width: 70%;
+  background-color: #fefeff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.content .list .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  height: 30px;
+}
+.content .list .info .pagination {
+  font-weight: bold;
+}
+.content .list .info select {
+  padding: 5px;
+  margin-left: 10px;
+  margin-top: 0;
+  margin-right: 0;
+}
+@media screen and (max-width: 950px) {
+  .filter {
+    width: 100%;
+  }
+  .content .list {
+    width: 100%;
+  }
+  .content {
+    flex-wrap: wrap;
+  }
+}
